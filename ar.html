@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sourav’s 23rd Birthday AR 🎉</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A-Frame + AR.js -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      <!-- Marker -->
+      <a-marker preset="hiro">
+
+        <!-- Maa Durga 3D Model -->
+        <a-entity 
+          gltf-model="url(assets/hindu_goddess_durga.glb)" 
+          scale="0.4 0.4 0.4" 
+          position="0 0 0">
+        </a-entity>
+
+        <!-- Blessing Text -->
+        <a-text 
+          value="🙏 Maa Durga blesses Sourav on his 23rd Birthday 🎂\nThank you for your wishes 💜" 
+          color="gold" 
+          align="center" 
+          position="0 1 0" 
+          scale="2 2 2">
+        </a-text>
+
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
